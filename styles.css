@@ -19,7 +19,7 @@ button {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #0050d4;
     color: white;
     border: none;
     border-radius: 5px;
@@ -27,14 +27,47 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #003da5;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .data-box, .result-box {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid #0050d4;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #eef;
+    font-size: 18px;
     font-weight: bold;
 }
+
+/* Estilização da Lista de Contagem */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+    background: #e7f3ff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+ .disabled-button {
+        background-color: grey !important;
+        color: white !important;
+        cursor: not-allowed !important;
+    }

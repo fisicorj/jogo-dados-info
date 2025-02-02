@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Dados e Informação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Dados e Informação</h1>
+        <p>Clique no botão para gerar um conjunto de dados brutos.</p>
+        <button onclick="generateData()">Gerar Dados</button>
+        <button onclick="resetData()">Resetar</button>
+        <div id="data-container" class="data-box"></div>
+        
+        <p>Escolha uma transformação para aplicar aos dados:</p>
+        <button onclick="transformData('media')">Calcular Média</button>
+        <button onclick="transformData('ordenar')">Ordenar</button>
+        <button onclick="transformData('contagem')">Contagem</button>
+        <button onclick="transformData('categorizar')">Categorizar</button>
+        
+        <h2>Resultado</h2>
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <script>
+        let currentData = [];
+        let externalData = [];
+
+        async function loadExternalData() {
+            try {
+                const response = await fetch('dados_massivos.json');
+                externalData = await response.json();
+            } catch (error) {
+                console.error("Erro ao carregar dados externos", error);
+            }
+        }
+
+        function generateData() {
+            if (externalData.length > 0) {
+                currentData = externalData[Math.floor(Math.random() * externalData.length)];
+                document.getElementById("data-container").innerText = `Dados: ${currentData.join(", ")}`;
+                document.getElementById("result").innerText = "";
+            } else {
+                document.getElementById("data-container").innerText = "Erro ao carregar dados. Verifique o JSON.";
+            }
+        }
+
+        function resetData() {
+            currentData = [];
+            document.getElementById("data-container").innerText = "";
+            document.getElementById("result").innerText = "";
+        }
+
+        function transformData(action) {
+            let result = "";
+
+            if (currentData.length === 0) {
+                result = "Por favor, gere um conjunto de dados primeiro!";
+            } else {
+                switch (action) {
+                    case 'media':
+                        if (currentData.every(n => typeof n === 'number')) {
+                            const sum = currentData.reduce((acc, num) => acc + num, 0);
+                            result = `Média: ${(sum / currentData.length).toFixed(2)}`;
+                        } else {
+                            result = "Não é possível calcular a média para esses dados.";
+                        }
+                        break;
+                    case 'ordenar':
+                        result = `Ordenado: ${[...currentData].sort((a, b) => (a > b ? 1 : -1)).join(", ")}`;
+                        break;
+                    case 'contagem':
+                        const countMap = {};
+                        currentData.forEach(item => countMap[item] = (countMap[item] || 0) + 1);
+                        result = "Contagem: " + JSON.stringify(countMap);
+                        break;
+                    case 'categorizar':
+                        if (currentData.every(item => typeof item === 'string')) {
+                            result = `Categorias: ${currentData.join(" - ")}`;
+                        } else {
+                            result = "Não há categorias claras para esses dados.";
+                        }
+                        break;
+                    default:
+                        result = "Ação desconhecida";
+                }
+            }
+            document.getElementById("result").innerText = result;
+        }
+
+        loadExternalData();
+    </script>
+</body>
+</html>

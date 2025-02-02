@@ -11,7 +11,7 @@ Neste jogo, você poderá:
 - Visualizar os resultados de forma organizada e interativa.
 - Aprender a diferença entre dados e informação enquanto se diverte!
 
-### English 🇬🇧
+### English
 Welcome to **Data Explorers** – an educational and interactive game that transforms data into a fun and engaging experience! Inspired by the concept that "Data is the new oil," this game challenges you to explore, transform, and understand the value of data.
 
 In this game, you can:
@@ -30,7 +30,7 @@ In this game, you can:
 - **Design Responsivo**: Uma interface simples, intuitiva e acessível em dispositivos móveis e desktops.
 - **Educação Gamificada**: Ideal para estudantes, professores e entusiastas de dados.
 
-### English 🇬🇧
+### English
 - **Data Transformations**: Explore tools like counting, sorting, categorizing, and calculating averages.
 - **Available Languages**: Supports **Portuguese**, **English**, **Spanish**, and **German**.
 - **Responsive Design**: A simple, intuitive interface accessible on mobile and desktop devices.
@@ -43,7 +43,7 @@ In this game, you can:
 ### Português 🇧🇷
 O objetivo do jogo é mostrar como os dados brutos podem ser refinados para se tornarem informação valiosa – exatamente como o petróleo bruto se torna combustível!
 
-### English 🇬🇧
+### English 
 The goal of the game is to show how raw data can be refined into valuable information – just like crude oil is turned into fuel!
 
 ---
@@ -53,7 +53,7 @@ The goal of the game is to show how raw data can be refined into valuable inform
 ### Português 🇧🇷
 Contribuições são super bem-vindas! Sinta-se à vontade para abrir issues, enviar pull requests ou sugerir melhorias.
 
-### English 🇬🇧
+### English 
 Contributions are highly welcome! Feel free to open issues, submit pull requests, or suggest improvements.
 
 ---

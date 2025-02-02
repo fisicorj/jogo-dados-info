@@ -64,7 +64,7 @@
                 currentData = externalData[selectedLanguage][Math.floor(Math.random() * externalData[selectedLanguage].length)];
                 document.getElementById("data-container").innerText = `Dados: ${currentData.join(", ")}`;
                 document.getElementById("result").innerText = "";
-				document.getElementById("generate-btn").disabled = true;
+		document.getElementById("generate-btn").disabled = true;
                 document.getElementById("generate-btn").classList.add("disabled-button");
             } else {
                 document.getElementById("data-container").innerHTML = "<span style='color: red;'>Erro ao carregar dados. Verifique o JSON.</span>";
@@ -75,7 +75,7 @@
             selectedLanguage = document.getElementById("language-select").value;
             generateData();  // Atualiza os dados para o novo idioma
             Object.keys(translations[selectedLanguage]).forEach(id => {
-                document.getElementById(id).innerHTML = translations[selectedLanguage][id];
+            document.getElementById(id).innerHTML = translations[selectedLanguage][id];
             });
         }
 
@@ -122,7 +122,7 @@
         let translations = {
             "pt": {
                 "language-label": "Escolha o idioma:",
-				"title": "Exploradores de Dados",
+		"title": "Exploradores de Dados",
                 "instructions": "Clique no botão para gerar um conjunto de dados brutos.",
                 "generate-btn": "Gerar Dados",
                 "reset-btn": "Resetar",
@@ -137,7 +137,7 @@
             },
             "en": {
                 "language-label": "Choose the language:",
-				"title": "Data Explorers",
+		"title": "Data Explorers",
                 "instructions": "Click the button to generate a set of raw data.",
                 "generate-btn": "Generate Data",
                 "reset-btn": "Reset",
@@ -150,9 +150,9 @@
                 "rules-title": "Game Rules",
                 "rules-text": "1. Click \"Generate Data\" to get a random dataset.<br>2. Choose a transformation to modify the data.<br>3. Observe the results and compare the differences.<br>4. Click \"Reset\" to start again."
             },
-			"es": {
+	    "es": {
                 "language-label": "Exploradores de Datos:",
-				"title": "Juego de Datos e Información",
+		"title": "Juego de Datos e Información",
                 "instructions": "Haz clic en el botón para generar un conjunto de datos sin procesar.",
                 "generate-btn": "Generar Datos",
                 "reset-btn": "Reiniciar",
@@ -167,7 +167,7 @@
             },
             "de": {
                 "language-label": "Wählen Sie die Sprache:",
-				"title": "Datenforscher",
+		"title": "Datenforscher",
                 "instructions": "Klicken Sie auf die Schaltfläche, um einen Rohdatensatz zu generieren.",
                 "generate-btn": "Daten generieren",
                 "reset-btn": "Zurücksetzen",

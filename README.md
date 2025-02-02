@@ -59,4 +59,7 @@ Contributions are highly welcome! Feel free to open issues, submit pull requests
 ---
 **Divirta-se refinando seus conhecimentos com o Exploradores de Dados! / Have fun refining your knowledge with Data Explorers!** 🛠️📈✨
 
+## License
+- This script is licensed under the MIT License. Feel free to use, modify, and distribute it as needed.
+
 

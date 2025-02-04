@@ -3,6 +3,7 @@ body {
     text-align: center;
     margin: 20px;
     background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -32,6 +33,11 @@ button:hover {
 
 button:active {
     transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
 }
 
 select {
@@ -66,8 +72,45 @@ li {
     margin: 5px 0;
     font-weight: bold;
 }
- .disabled-button {
-        background-color: grey !important;
-        color: white !important;
-        cursor: not-allowed !important;
-    }
+
+.disabled-button {
+    background-color: grey !important;
+    color: white !important;
+    cursor: not-allowed !important;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode button {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode button:hover {
+    background-color: #666;
+}
+
+.dark-mode button:disabled {
+    background-color: #555;
+}
+
+.dark-mode .data-box, .dark-mode .result-box {
+    background-color: #2a2a2a;
+    border-color: #777;
+    color: white;
+}
+
+.dark-mode li {
+    background: #333;
+    border: 1px solid #777;
+    color: white;
+}

@@ -3,6 +3,7 @@ let currentData = [];
 let externalData = {};
 let selectedLanguage = "pt";
 let translations = {};
+let isDarkMode = false; // Track dark mode state
 
 // Load translations from the JSON file
 async function loadTranslations() {
@@ -26,6 +27,21 @@ async function loadExternalData() {
         console.error("Error loading external data", error);
     } finally {
         document.getElementById("loading-spinner").style.display = "none"; // Hide loading spinner
+    }
+}
+
+// Toggle dark mode
+function toggleDarkMode() {
+    isDarkMode = !isDarkMode;
+    document.body.classList.toggle("dark-mode", isDarkMode);
+    localStorage.setItem("darkMode", isDarkMode); // Save user preference
+}
+
+// Apply dark mode if previously selected
+function applySavedDarkMode() {
+    if (localStorage.getItem("darkMode") === "true") {
+        isDarkMode = true;
+        document.body.classList.add("dark-mode");
     }
 }
 
@@ -120,5 +136,6 @@ function transformData(action) {
 }
 
 // Load necessary files on page load
+applySavedDarkMode();
 loadTranslations();
 loadExternalData();

@@ -18,6 +18,8 @@
             <option value="de">Deutsch</option>
         </select>
         
+        <button onclick="toggleDarkMode()" id="dark-mode-btn">Modo Escuro</button>
+        
         <p id="instructions">Clique no botão para gerar um conjunto de dados brutos.</p>
         <button onclick="generateData()" id="generate-btn" disabled>Gerar Dados</button>
         <button onclick="resetData()" id="reset-btn">Resetar</button>
@@ -41,7 +43,6 @@
 
     <div id="loading-spinner" style="display:none;">Carregando dados...</div>
 
-    <!-- Importa o JavaScript externo -->
     <script src="script.js"></script>
 </body>
 </html>
